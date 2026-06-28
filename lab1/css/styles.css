@@ -1,0 +1,104 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Moves Home, About, and Contact from content */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+}
+
+nav a:hover {
+    color: #00bfff;
+}
+
+.current {
+    color: #033c96;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    /*Instead of stacking vertically, places children next to each other */
+    justify-content: center;
+    /* Centers the entire group horizontally on the page */
+    align-items: center;
+    /*lines up the picture and the text vertically */
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: lightgray;
+    margin-top: 30px;
+}
+
+figure img {
+    width: 300px;
+    border-radius: 10px;
+    /*Slightly rounds the corners of the image.*/
+}
+
+h1 {
+    margin-bottom: 5px;
+    /* Reduces the space below my name */
+}
+
+header h2 {
+    margin-top: 0px;
+}
+
+#aboutMain h2,
+#contactMain h2 {
+    margin-top: 30px;
+    /* Removes the extra space above computer science student */
+}
+
+footer img {
+    width: 315px;
+    margin-top: 5px;
+}
+
+table {
+    margin:auto;
+}
+
+table, td { /* Using the comma we can apply it to all td */
+    border: 1px solid white;
+    padding: 7px; /* Makes space inside the table */
+}
+
+#aboutMain { /* Using this will only effect the about page main. You are calling <main id="aboutMain">*/
+    display: block;
+    text-align: center;
+}
+
+#contactMain {
+    display:block;
+    text-align: center;
+}
+
+        ul {
+            display: inline-block;
+            text-align: left;
+            margin-top: 0px; /* Moves bullet list closer to Hobbies & Interests text */
+        }
+
+        tr:first-child {
+            font-weight: bold;
+        }
+
