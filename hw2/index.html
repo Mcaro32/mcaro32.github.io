@@ -20,14 +20,14 @@
                 <p class="text-center text-muted">
                     Answer all 10 questions and click <strong>Submit Quiz</strong> to see your score.
                 </p>
-                <h3><span id="markImg1"></span>1. What is the capital of California?</h3>
+                <h2><span id="markImg1"></span>1. What is the capital of California?</h2>
                 <input type="text" id="q1">
                 <br><br>
 
                 <div id="q1Feedback"></div>
                 <br><br>
 
-                <h3><span id="markImg2"></span>2. What is the longest river?</h3>
+                <h2><span id="markImg2"></span>2. What is the longest river?</h2>
                 <select id="q2">
                     <option value="">Select One</option>
                     <option value="ms">Mississippi</option>
@@ -39,7 +39,7 @@
                 <div id="q2Feedback"></div>
                 <br><br>
 
-                <h3><span id="markImg3"></span>3. What presidents are carved into Mount Rushmore?</h3>
+                <h2><span id="markImg3"></span>3. What presidents are carved into Mount Rushmore?</h2>
                 <input type="checkbox" id="Jackson"> <label for="Jackson">A. Jackson</label>
                 <input type="checkbox" id="Franklin"> <label for="Franklin">B. Franklin</label>
                 <input type="checkbox" id="Jefferson"> <label for="Jefferson">T. Jefferson</label>
@@ -48,20 +48,20 @@
                 <div id="q3Feedback"></div>
                 <br><br>
 
-                <h3><span id="markImg4"></span>4. What is the smallest US State?</h3>
+                <h2><span id="markImg4"></span>4. What is the smallest US State?</h2>
                 <div id="q4Choices"></div>
                 <br><br>
                 <div id="q4Feedback"></div>
 
-                <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+                <div id="validationFdbk" class="bg-danger text-white"></div>
 
-                <h3><span id="markImg5"></span>5. What ocean borders California, Oregon, and Washington?</h3>
+                <h2><span id="markImg5"></span>5. What ocean borders California, Oregon, and Washington?</h2>
                 <input type="text" id="q5">
                 <br><br>
                 <div id="q5Feedback"></div>
                 <br><br>
 
-                <h3><span id="markImg6"></span>6. Which state is known as the Golden State?</h3>
+                <h2><span id="markImg6"></span>6. Which state is known as the Golden State?</h2>
                 <select id="q6">
                     <option value="">Select One</option>
                     <option value="ca">California</option>
@@ -73,7 +73,7 @@
                 <div id="q6Feedback"></div>
                 <br><br>
 
-                <h3><span id="markImg7"></span>7. Which of these are Great Lakes?</h3>
+                <h2><span id="markImg7"></span>7. Which of these are Great Lakes?</h2>
 
                 <input type="checkbox" id="Superior">
                 <label for="Superior">Superior</label>
@@ -91,13 +91,13 @@
                 <div id="q7Feedback"></div>
                 <br><br>
 
-                <h3><span id="markImg8"></span>8. How many states are in the United States?</h3>
+                <h2><span id="markImg8"></span>8. How many states are in the United States?</h2>
                 <input type="number" id="q8">
                 <br><br>
                 <div id="q8Feedback"></div>
                 <br><br>
 
-                <h3><span id="markImg9"></span>9. Which U.S. state has the largest population?</h3>
+                <h2><span id="markImg9"></span>9. Which U.S. state has the largest population?</h2>
 
                 <input type="radio" name="q9" id="ca" value="California">
                 <label for="ca">California</label>
@@ -115,7 +115,7 @@
                 <div id="q9Feedback"></div>
                 <br><br>
 
-                <h3><span id="markImg10"></span>10. Which state is home to most of Yellowstone National Park?</h3>
+                <h2><span id="markImg10"></span>10. Which state is home to most of Yellowstone National Park?</h2>
 
                 <input type="radio" name="q10" id="wy" value="Wyoming">
                 <label for="wy">Wyoming</label>
@@ -135,14 +135,15 @@
 
 
                 <button class="btn btn-primary btn-lg mt-3">Submit Quiz</button>
-                <h2 id="totalScore" class="text-info"></h2>
-                <h3 id="congratsMsg"></h3>
-                <h3 id="totalAttempts"></h3>
+                <div id="totalScore" class="text-info fs-2 fw-bold"></div>
+                <div id="congratsMsg" class="fs-3"></div>
+                <div id="totalAttempts" class="fs-3"></div>
 
 
                 <script src="js/script.js"></script>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
