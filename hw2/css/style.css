@@ -1,0 +1,38 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    border-radius: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#q1Feedback,
+#q2Feedback,
+#q3Feedback,
+#q4Feedback,
+#q5Feedback,
+#q6Feedback,
+#q7Feedback,
+#q8Feedback,
+#q9Feedback,
+#q10Feedback {
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+img {
+    vertical-align: middle;
+}

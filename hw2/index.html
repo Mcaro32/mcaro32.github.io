@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Geography Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container mt-4">
+
+        <h1 class="p-5 bg-info">US Geography Quiz</h1>
+        <h3><span id="markImg1"></span>1. What is the capital of California?</h3>
+        <input type="text" id="q1">
+        <br><br>
+
+        <div id="q1Feedback"></div>
+        <br><br>
+
+        <h3><span id="markImg2"></span>2. What is the longest river?</h3>
+        <select id="q2">
+            <option value="">Select One</option>
+            <option value="ms">Mississippi</option>
+            <option value="mo">Missouri</option>
+            <option value="co">Colorado</option>
+            <option value="de">Delaware</option>
+        </select>
+        <br><br>
+        <div id="q2Feedback"></div>
+        <br><br>
+
+        <h3><span id="markImg3"></span>3. What presidents are carved into Mount Rushmore?</h3>
+        <input type="checkbox" id="Jackson"> <label for="Jackson">A. Jackson</label>
+        <input type="checkbox" id="Franklin"> <label for="Franklin">B. Franklin</label>
+        <input type="checkbox" id="Jefferson"> <label for="Jefferson">T. Jefferson</label>
+        <input type="checkbox" id="Roosevelt"> <label for="Roosevelt">T. Roosevelt</label>
+        <br><br>
+        <div id="q3Feedback"></div>
+        <br><br>
+
+        <h3><span id="markImg4"></span>4. What is the smallest US State?</h3>
+        <div id="q4Choices"></div>
+        <br><br>
+        <div id="q4Feedback"></div>
+
+        <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+
+        <h3><span id="markImg5"></span>5. What ocean borders California, Oregon, and Washington?</h3>
+        <input type="text" id="q5">
+        <br><br>
+        <div id="q5Feedback"></div>
+        <br><br>
+
+        <h3><span id="markImg6"></span>6. Which state is known as the Golden State?</h3>
+        <select id="q6">
+            <option value="">Select One</option>
+            <option value="ca">California</option>
+            <option value="fl">Florida</option>
+            <option value="tx">Texas</option>
+            <option value="az">Arizona</option>
+        </select>
+        <br><br>
+        <div id="q6Feedback"></div>
+        <br><br>
+
+        <h3><span id="markImg7"></span>7. Which of these are Great Lakes?</h3>
+
+        <input type="checkbox" id="Superior">
+        <label for="Superior">Superior</label>
+
+        <input type="checkbox" id="Michigan">
+        <label for="Michigan">Michigan</label>
+
+        <input type="checkbox" id="Tahoe">
+        <label for="Tahoe">Tahoe</label>
+
+        <input type="checkbox" id="Erie">
+        <label for="Erie">Erie</label>
+
+        <br><br>
+        <div id="q7Feedback"></div>
+        <br><br>
+
+        <h3><span id="markImg8"></span>8. How many states are in the United States?</h3>
+        <input type="number" id="q8">
+        <br><br>
+        <div id="q8Feedback"></div>
+        <br><br>
+
+        <h3><span id="markImg9"></span>9. Which U.S. state has the largest population?</h3>
+
+        <input type="radio" name="q9" id="ca" value="California">
+        <label for="ca">California</label>
+
+        <input type="radio" name="q9" id="tx" value="Texas">
+        <label for="tx">Texas</label>
+
+        <input type="radio" name="q9" id="fl" value="Florida">
+        <label for="fl">Florida</label>
+
+        <input type="radio" name="q9" id="ny" value="New York">
+        <label for="ny">New York</label>
+
+        <br><br>
+        <div id="q9Feedback"></div>
+        <br><br>
+
+        <h3><span id="markImg10"></span>10. Which state is home to most of Yellowstone National Park?</h3>
+
+        <input type="radio" name="q10" id="wy" value="Wyoming">
+        <label for="wy">Wyoming</label>
+
+        <input type="radio" name="q10" id="co" value="Colorado">
+        <label for="co">Colorado</label>
+
+        <input type="radio" name="q10" id="mt" value="Montana">
+        <label for="mt">Montana</label>
+
+        <input type="radio" name="q10" id="id" value="Idaho">
+        <label for="id">Idaho</label>
+
+        <br><br>
+        <div id="q10Feedback"></div>
+        <br><br>
+
+
+        <button class="btn btn-primary btn-lg mt-3">Submit Quiz</button>
+        <h2 id="totalScore" class="text-info"></h2>
+        <h3 id="congratsMsg"></h3>
+        <h3 id="totalAttempts"></h3>
+
+
+        <script src="js/script.js"></script>
+    </div>
+</body>
+
+</html>
