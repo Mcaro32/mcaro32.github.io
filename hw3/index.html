@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Character Search</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Rick and Morty Character Search</h1>
+        <p> Search for characters by name and status</p>
+    </header>
+
+    <main>
+        <form id="characterForm">
+
+        <div>
+            <label for="characterName">
+                Character Name:
+            </label>
+            <input type="text" id="characterName" placeholder="Example: Rick Sanchez">
+        </div>
+
+        <div>
+            <label for="characterStatus">
+                Status:
+            </label>
+
+
+            <select id="characterStatus">
+                <option value="">Any Status</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
+            </select>
+        </div>
+
+        <button type = "submit">
+            Search
+        </button>
+
+        <p id = "message"></p>
+
+        </form>
+
+        <section id ="characterResults"></section>
+
+    </main>
+</body>
+
+</html>
