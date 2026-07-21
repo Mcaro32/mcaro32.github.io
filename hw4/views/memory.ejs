@@ -1,0 +1,57 @@
+<%- include("partials/head", { title: "Memory & Storage" }) %>
+
+<%- include("partials/nav", { currentPage: "memory" }) %>
+
+<main>
+    <section>
+        <h2>Memory & Storage</h2>
+
+        <div class="columns">
+            <article>
+                <h3>RAM (Memory)</h3>
+
+                <img src="/img/ram.png" alt="RAM Memory">
+
+                <p>
+                    Random Access Memory, or RAM, is where a computer keeps information
+                    it needs while programs are open. Having more RAM helps your computer
+                    handle several programs at once without slowing down.
+                </p>
+            </article>
+
+            <article>
+                <h3>Storage (SSD / HDD)</h3>
+
+                <img src="/img/storage.png" alt="Computer Storage">
+
+                <p>
+                    Storage devices like Solid-State Drives (SSD) and Hard Disk Drives
+                    (HDD) keep the operating system, programs, and your files saved,
+                    even when the computer is off.
+                </p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<section class="content">
+    <h3>Sources</h3>
+
+    <ul>
+        <li>
+            <a href="https://www.ibm.com/think/topics/hard-disk-drive-vs-solid-state-drive"
+               target="_blank">
+                Hard disk drive (HDD) versus Solid-state drive (SSD)
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.intel.com/content/www/us/en/tech-tips-and-tricks/computer-ram.html"
+               target="_blank">
+                What Is Computer and Laptop RAM?
+            </a>
+        </li>
+    </ul>
+</section>
+
+<%- include("partials/footer") %>

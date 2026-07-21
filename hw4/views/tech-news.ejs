@@ -1,0 +1,68 @@
+<%- include("partials/head", { title: title }) %>
+
+    <%- include("partials/nav", { currentPage: currentPage }) %>
+
+        <main>
+
+            <section class="content">
+
+                <h2>Latest Technology News</h2>
+
+                <p>The articles below are retrieved live from the Hacker News API each time this page loads.</p>
+
+                <ul>
+
+                    <% stories.forEach(story=> { %> <!--Goes through every story in the story array -->
+
+                        <!-- Every time a story is found, it creates <li> with the story and link-->
+                        <li>
+                            <a href="<%= story.url %>" target="_blank">
+                                <%= story.title %>
+                            </a>
+                        </li>
+
+                        <% }) %>
+
+                </ul>
+
+            </section>
+
+            <br>
+
+            <section class="content">
+
+                <h2>Server Hardware Information</h2>
+
+
+                <p>
+                    The information below is generated in real time using the
+                    <strong>systeminformation</strong> Node.js package. It shows the
+                    hardware specifications of the computer hosting this website,
+                    including its processor, memory, and operating system.
+                </p>
+
+                <p><strong>CPU:</strong>
+                    <%= cpu.brand %> <!-- SHows the CPU brand that comes from the system information package-->
+                </p>
+
+                <p><strong>Manufacturer:</strong>
+                    <%= cpu.manufacturer %>
+                </p>
+
+                <p><strong>Physical Cores:</strong>
+                    <%= cpu.physicalCores %>
+                </p>
+
+                <p><strong>Total Memory:</strong>
+                    <%= (memory.total / 1073741824).toFixed(2) %> GB
+                </p>
+
+                <p><strong>Operating System:</strong>
+                    <%= os.distro %>
+                </p>
+
+            </section>
+
+        </main>
+
+        <%- include("partials/footer") %>

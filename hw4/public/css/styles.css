@@ -1,0 +1,142 @@
+body {
+    background-color: #0f172a;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    color: lightgray;
+}
+
+nav {
+    text-align: center;
+    background-color: #1e3a5f;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 20px;
+}
+
+nav a:hover {
+    color: #66ccff;
+}
+
+.current {
+    font-weight: bold;
+    color: #66ccff;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
+
+footer {
+    text-align: center;
+    color: lightgray;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.intro img {
+    width: 375px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.intro h2 {
+    text-align: center;
+}
+
+.info-box {
+    background-color: #1e3a5f;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.info-box h3 {
+    margin-top: 0;
+    color: #66ccff;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    background-color: #16213a;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.content img {
+    width: 450px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.content h2,
+.content h3 {
+    color: #66ccff;
+}
+
+.content p,
+.content li {
+    line-height: 1.6;
+}
+
+.columns {
+    display: flex;
+    /*places articles next to each other */
+    gap: 30px;
+    /* Leaves 30 pixels of space between the flex items */
+    margin-top: 30px;
+}
+
+.columns article {
+    background-color: #16213a;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* Splits the avaiable space equally. Makes both articles the same width automatically */
+    min-height: 450px;
+}
+
+.columns img {
+    width: 250px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.content a {
+    color: #66ccff;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
