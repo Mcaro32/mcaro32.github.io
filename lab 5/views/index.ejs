@@ -1,0 +1,84 @@
+<%- include("partials/header.ejs") %>
+
+    <body>
+
+        <h1>Quote Finder</h1>
+
+        <form action="/searchByKeyword">Keyword: <input type="text" name="keyword">
+            <button>Search by Keyword</button>
+        </form>
+
+        <form action="/searchByAuthor">
+
+            <select name="authorId">
+
+                <% for (author of authors) { %>
+
+                    <option value="<%= author.authorId %>">
+                        <%= author.firstName %>
+                            <%= author.lastName %>
+                    </option>
+
+                    <% } %>
+
+            </select>
+
+            <button>Search by Author</button>
+
+        </form>
+
+
+        <form action="/searchByCategory">
+            <h3>Search by Category</h3>
+            <select name="category">
+
+                <% for (let category of categories) { %>
+                    <!-- Loops thorugh every category that index.mjs sent to the page -->
+
+                    <option value="<%= category.category %>">
+                        <%= category.category %>
+                    </option>
+
+                    <% } %>
+
+            </select>
+
+            <button>Search</button>
+
+        </form>
+
+      <form action="/searchByLikes">
+
+    <h3>Search by Likes</h3>
+
+ <label>From:</label>
+<input type="text" name="minLikes">
+
+<br><br>
+
+<label>To:</label>
+<input type="text" name="maxLikes">
+
+    <br><br>
+
+    Sort By:
+
+    <input type="radio" name="sortOrder" value="ASC" checked>
+    Lowest to Highest
+
+    <input type="radio" name="sortOrder" value="DESC">
+    Highest to Lowest
+
+    <br><br>
+
+    <button>Search</button>
+
+</form>
+
+
+        <%- include ("partials/footer.ejs") %>
+
+
+    </body>
+
+    </html>
