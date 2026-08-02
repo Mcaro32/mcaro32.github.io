@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Quote</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <main class="list-page">
+
+    <div class="page-header">
+
+        <div>
+            <h1>Update Quote</h1>
+            <p>Edit the quote information below, then select Update Quote.</p>
+        </div>
+
+        <a class="back-link" href="/quotes">Back to Manage Quotes</a>
+
+    </div>
+
+    <form method="POST" action="/quote/edit">
+
+        <input type="hidden" name="quoteId" value="<%=quoteInfo[0].quoteId%>">
+
+        Quote:
+        <textarea name="quote" rows="5" cols="50"><%=quoteInfo[0].quote%></textarea> <br>
+
+        Author:
+        <select name="authorId">
+
+            <!--
+    Creates a dropdown menu containing every author from the database.
+    The author's name is displayed to the user, but the authorId is
+    stored as the value that gets submitted. The "selected" check
+    automatically highlights the author who is currently assigned to
+    this quote so the form is pre-filled when editing.
+-->
+            <% for (let i=0; i < authors.length; i++) { %>
+
+                <option value="<%= authors[i].authorId %>" <% if (authors[i].authorId==quoteInfo[0].authorId) { %>
+                    selected
+                    <% } %>
+                        >
+                        <%= authors[i].firstName %>
+                            <%= authors[i].lastName %>
+                </option>
+
+                <% } %>
+
+        </select>
+
+        <!--
+    Creates a category dropdown using the distinct categories retrieved
+    from the database. The current quote's category is automatically selected.
+-->
+        Category:
+        <select name="category">
+
+            <% for (let i=0; i < categories.length; i++) { %>
+
+                <option value="<%= categories[i].category %>" <% if (categories[i].category==quoteInfo[0].category) { %>
+                    selected
+                    <% } %>
+                        >
+                        <%= categories[i].category %>
+                </option>
+
+                <% } %>
+
+        </select>
+        <br><br>
+
+      Likes:
+      <input type="number" name="likes" value="<%=quoteInfo[0].likes %>"><br>
+
+                <button>Update Quote</button>
+
+
+    </form>
+
+    </main>
+
+    <footer>
+    CST 336 Internet Programming. 2026 &copy; Caro
+</footer>
+
+</body>
+
+</html>

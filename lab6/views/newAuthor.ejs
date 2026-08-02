@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Author</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+
+            <main class="list-page">
+
+    <div class="page-header">
+
+        <div>
+            <h1>Add a New Author</h1>
+            <p>Enter the author’s information below, then select Add Author.</p>
+        </div>
+
+        <a class="back-link" href="/">Back to Dashboard</a>
+
+    </div>
+
+     <% if (typeof message !="undefined" ) { %>
+        <h3>
+            <%= message %>
+        </h3>
+        <% } %>
+
+            <form action="/author/new" method="POST">
+                First Name:
+                <input type="text" name="fName"><br>
+                Last Name:
+                <input type="text" name="lName"><br>
+                Date of Birth:
+                <input type="date" name="birthDate"><br>
+                Date of Death:
+                <input type="date" name="deathDate"><br>
+                Sex:
+                <select name="sex">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select><br>
+                Profession:
+                <input type="text" name="profession"><br>
+                Country:
+                <input type="text" name="country"><br>
+                Portrait URL:
+                <input type="text" name="portrait"><br>
+                Biography:<br>
+                <textarea name="biography" rows="5" cols="50"></textarea><br><br>
+
+                <button>Add Author</button>
+
+            </form>
+
+        </main>
+
+        <footer>
+    CST 336 Internet Programming. 2026 &copy; Caro
+</footer>
+
+</body>
+
+</html>

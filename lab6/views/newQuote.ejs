@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Quote</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <main class="list-page">
+
+        <div class="page-header">
+
+            <div>
+                <h1>Add a New Quote</h1>
+                <p>Enter the quote information below, then select Add Quote.</p>
+            </div>
+
+            <a class="back-link" href="/">Back to Dashboard</a>
+
+        </div>
+
+        <% if (typeof message !="undefined" ) { %>
+            <h3>
+                <%= message %>
+            </h3>
+            <% } %>
+
+                <form action="/quote/new" method="POST">
+
+                    Quote:
+                    <br>
+                    <textarea name="quote" rows="5" cols="50"></textarea>
+                    <br>
+
+                    Author:
+                    <select name="authorId">
+
+                        <!--Creates a dropdown menu containing every author from the database.
+                The user sees the author's name, but the form submits the authorId.
+-->
+                        <% for (let i=0; i < authors.length; i++) { %>
+
+                            <option value="<%= authors[i].authorId %>">
+                                <%= authors[i].firstName %>
+                                    <%= authors[i].lastName %>
+                            </option>
+
+                            <% } %>
+                    </select> <br>
+
+                    Category:
+                    <select name="category">
+
+                        <% for (let i=0; i < categories.length; i++) { %>
+
+                            <option value="<%= categories[i].category %>">
+                                <%= categories[i].category %>
+                            </option>
+
+                            <% } %>
+
+                    </select>
+                    <br><br>
+
+                    Likes:
+                    <input type="number" name="likes" value="0"><br>
+
+
+
+                    <button>Add Quote</button>
+
+                </form>
+
+    </main>
+
+    <footer>
+        CST 336 Internet Programming. 2026 &copy; Caro
+    </footer>
+
+</body>
+
+</html>

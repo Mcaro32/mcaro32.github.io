@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Author</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <main class="list-page">
+
+    <div class="page-header">
+
+        <div>
+            <h1>Update Author</h1>
+            <p>Edit the author’s information below, then select Update Author.</p>
+        </div>
+
+        <a class="back-link" href="/authors">Back to Manage Authors</a>
+
+    </div>
+
+    <form method="POST" action="/author/edit">
+
+        <input type="hidden" name="authorId" value="<%=authorInfo[0].authorId%>">
+
+        First Name:
+        <input type="text" name="fName" value="<%=authorInfo[0].firstName%>">
+        <br>
+
+        Last Name:
+        <input type="text" name="lName" value="<%=authorInfo[0].lastName%>">
+        <br>
+
+        Date of Birth:
+        <input type="date" name="dob" value="<%=authorInfo[0].dobISO%>">
+        <br>
+
+        Date of Death:
+        <input type="date" name="dod" value="<%=authorInfo[0].dodISO%>">
+        <br>
+
+        Sex:
+        <input type="radio" name="sex" value="M" <% if (authorInfo[0].sex=="M" ) { %>
+        checked
+        <% } %>
+
+            > Male
+
+            <input type="radio" name="sex" value="F" <% if (authorInfo[0].sex=="F" ) { %>
+            checked
+            <% } %>
+
+                > Female
+                <br>
+
+                Profession:
+                <input type="text" name="profession" value="<%=authorInfo[0].profession%>">
+                <br>
+
+                Country:
+                <input type="text" name="country" value="<%=authorInfo[0].country%>">
+                <br>
+
+                Portrait URL:
+                <input type="text" name="portrait" value="<%=authorInfo[0].portrait%>">
+                <br>
+
+                Biography:
+                <textarea name="biography" rows="5" cols="50"><%=authorInfo[0].biography%></textarea>
+                <br>
+
+                <button>Update Author</button>
+
+
+    </form>
+
+    </main>
+
+    <footer>
+    CST 336 Internet Programming. 2026 &copy; Caro
+</footer>
+
+</body>
+
+</html>

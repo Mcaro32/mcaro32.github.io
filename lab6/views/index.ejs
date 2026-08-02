@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Homepage</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+
+<body>
+
+    <main class="admin-dashboard">
+
+        <h1>Quotes - Admin Section</h1>
+
+        <section class="admin-card">
+            <form action="/author/new">
+                <button>Create Author</button>
+            </form>
+
+            <div class="admin-info">
+                <h2>Add a New Author</h2>
+                <p>
+                    Add a new author to the database by entering their personal
+                    information, profession, country, portrait URL, and biography.
+                </p>
+            </div>
+        </section>
+
+        <section class="admin-card">
+            <form action="/quote/new">
+                <button>Create Quote</button>
+            </form>
+
+            <div class="admin-info">
+                <h2>Add a New Quote</h2>
+                <p>
+                    Add a new quote by entering the quote text, selecting an author,
+                    choosing a category, and setting the initial number of likes.
+                </p>
+            </div>
+        </section>
+
+        <section class="admin-card">
+            <form action="/authors">
+                <button>Manage Authors</button>
+            </form>
+
+            <div class="admin-info">
+                <h2>View and Manage Authors</h2>
+                <p>
+                    Browse all authors in the database. Update existing author
+                    information or permanently remove authors when needed.
+                </p>
+            </div>
+        </section>
+
+        <section class="admin-card">
+            <form action="/quotes">
+                <button>Manage Quotes</button>
+            </form>
+
+            <div class="admin-info">
+                <h2>View and Manage Quotes</h2>
+                <p>
+                    Browse all quotes in the database. Update quote information,
+                    change the assigned author or category, or permanently remove
+                    quotes when necessary.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+    CST 336 Internet Programming. 2026 &copy; Caro
+</footer>
+
+</body>
+
+
+
+</html>

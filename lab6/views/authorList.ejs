@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Author</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+
+<body>
+
+    <main class="list-page">
+
+        <div class="page-header">
+            <div>
+                <h1>Manage Authors</h1>
+                <p>View, update, or delete authors currently stored in the database.</p>
+            </div>
+            <a class="back-link" href="/">Back to Dashboard</a>
+        </div>
+
+        <div class="table-card">
+
+            <table class="admin-table">
+
+                <thead>
+                    <tr>
+                        <th>Author</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <% for (let i=0; i < authors.length; i++) { %>
+
+                        <tr>
+                            <td>
+                                <strong>
+                                    <%= authors[i].firstName %>
+                                        <%= authors[i].lastName %>
+                                </strong>
+                            </td>
+
+                            <td class="action-links">
+                                <a class="edit-link" href="/author/edit?authorId=<%= authors[i].authorId %>">
+                                    Update
+                                </a>
+
+                                <a class="delete-link" href="/author/delete?authorId=<%= authors[i].authorId %>">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+
+                        <% } %>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <footer>
+    CST 336 Internet Programming. 2026 &copy; Caro
+</footer>
+
+</body>
+
+</html>
